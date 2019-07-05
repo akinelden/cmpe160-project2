@@ -9,8 +9,8 @@ public class Locomotive extends Waggon implements Comparable<Locomotive>{
         power = 0;
     }
 
-    public Locomotive(String n, String l, double p){
-        super(n,l);
+    public Locomotive(String n, double p){
+        super(n);
         power = p;
     }
 
