@@ -1,5 +1,8 @@
 package transportation;
 
+import adts.MyDLL;
+
+import java.util.Comparator;
 import java.util.LinkedList;
 
 public class Mission {
@@ -60,6 +63,12 @@ public class Mission {
     }
 
     public String goMidwayCity(){
+        indexes.sort(new Comparator<Integer>() {
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                return -o1.compareTo(o2);
+            }
+        });
         for(int i=0; i<fromMidway; i++){
             Waggon w = midway.popWaggon();
             if(w==null){
@@ -67,13 +76,16 @@ public class Mission {
             }
             train.addWaggon(w);
         }
-
+        LinkedList<Waggon> removedWaggons = new LinkedList<>();
         for(Integer index : indexes){
             Waggon w = train.removeWaggon(index);
             if(w==null){
                 return "Mission "+Integer.toString(missionNo)+"- Train doesn't have any waggon at specified indexes.\nCan't continue mission.\nSystem exiting.";
             }
-            midway.pushWaggon(w);
+            removedWaggons.add(w);
+        }
+        while(removedWaggons.size()>0){
+            midway.pushWaggon(removedWaggons.pollLast());
         }
         return null;
     }

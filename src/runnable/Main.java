@@ -25,23 +25,23 @@ public class Main {
 		for(Mission mission : missions){
 			String result;
 			result = mission.startMission();
-			showErrorDialog(result);
+			showDialogWindow(result, "Error", 0);
 			result = mission.goMidwayCity();
-			showErrorDialog(result);
+			showDialogWindow(result, "Error", 0);
 			result = mission.goTargetCity();
-			showErrorDialog(result);
+			showDialogWindow(result, "Error", 0);
 		}
 		writeResult(outputFileName, cities);
-		showErrorDialog("Simulation is succesfully completed.\n Check the file named: '"+outputFileName+"' to see the results.");
+		showDialogWindow("Simulation is succesfully completed.\n Check the file named: '"+outputFileName+"' to see the results.", "Info", 1);
 	}
 
 
-	private static void showErrorDialog(String errorText){
+	private static void showDialogWindow(String errorText, String title, int messageType){
 		if(errorText == null){
 			return;
 		}
 		JFrame frame = new JFrame("TrainTransportation");
-		JOptionPane.showMessageDialog(frame, errorText, "Alert", JOptionPane.ERROR_MESSAGE);
+		JOptionPane.showMessageDialog(frame, errorText, title, messageType);
 		System.exit(1);
 	}
 
@@ -58,9 +58,9 @@ public class Main {
 			}
 			reader.close();
 		}catch(FileNotFoundException e1){
-			showErrorDialog("The file: " + fileName +" could not found.\nSystem exiting.");
+			showDialogWindow("The file: " + fileName +" could not found.\nSystem exiting.", "Error", 0);
 		}catch(IOException e2){
-			showErrorDialog("An error occurred while reading " + fileName +" file.\nSystem exiting.");
+			showDialogWindow("An error occurred while reading " + fileName +" file.\nSystem exiting.", "Error", 0);
 		}
 	}
 
@@ -82,11 +82,11 @@ public class Main {
 			}
 			reader.close();
 		}catch(FileNotFoundException e1){
-			showErrorDialog("The file: " + fileName +" could not found.\nSystem exiting.");
+			showDialogWindow("The file: " + fileName +" could not found.\nSystem exiting.", "Error", 0);
 		}catch(IOException e2){
-			showErrorDialog("An error occurred while reading " + fileName +" file.\nSystem exiting.");
+			showDialogWindow("An error occurred while reading " + fileName +" file.\nSystem exiting.", "Error", 0);
 		}catch(ArrayIndexOutOfBoundsException e3){
-			showErrorDialog("An error occurred while reading " + fileName +" file.\nOne more lines don't contain waggon name and/or city name.\nSystem exiting.");
+			showDialogWindow("An error occurred while reading " + fileName +" file.\nOne more lines don't contain waggon name and/or city name.\nSystem exiting.", "Error", 0);
 		}
 	}
 
@@ -108,13 +108,13 @@ public class Main {
 			}
 			reader.close();
 		}catch(FileNotFoundException e1){
-			showErrorDialog("The file: " + fileName +" could not found.\nSystem exiting.");
+			showDialogWindow("The file: " + fileName +" could not found.\nSystem exiting.", "Error", 0);
 		}catch(IOException e2){
-			showErrorDialog("An error occurred while reading " + fileName +" file.\nSystem exiting.");
+			showDialogWindow("An error occurred while reading " + fileName +" file.\nSystem exiting.", "Error", 0);
 		}catch(ArrayIndexOutOfBoundsException e3){
-			showErrorDialog("An error occurred while reading " + fileName +" file.\nOne more lines don't contain locomotive name, city name and/or locomotive power.\nSystem exiting.");
+			showDialogWindow("An error occurred while reading " + fileName +" file.\nOne more lines don't contain locomotive name, city name and/or locomotive power.\nSystem exiting.", "Error", 0);
 		}catch(NumberFormatException e4){
-			showErrorDialog("An error occurred while reading " + fileName +" file.\nLocomotive power values are not double compatible.\nSystem exiting.");
+			showDialogWindow("An error occurred while reading " + fileName +" file.\nLocomotive power values are not double compatible.\nSystem exiting.", "Error", 0);
 		}
 	}
 
@@ -127,7 +127,7 @@ public class Main {
 			while(line!=null){
 				Mission m = new Mission(i);
 				if(!m.parseMissionString(line, cities)){
-					showErrorDialog("An error occurred while reading the file: "+fileName+".\nMissions are not properly defined.");
+					showDialogWindow("An error occurred while reading the file: "+fileName+".\nMissions are not properly defined.", "Error", 0);
 				}
 				missions.add(m);
 				i++;
@@ -135,9 +135,9 @@ public class Main {
 			}
 			reader.close();
 		}catch(FileNotFoundException e1){
-			showErrorDialog("The file: " + fileName +" could not found.\nSystem exiting.");
+			showDialogWindow("The file: " + fileName +" could not found.\nSystem exiting.", "Error", 0);
 		}catch(IOException e2){
-			showErrorDialog("An error occurred while reading " + fileName +" file.\nSystem exiting.");
+			showDialogWindow("An error occurred while reading " + fileName +" file.\nSystem exiting.", "Error", 0);
 		}
 	}
 
@@ -163,7 +163,7 @@ public class Main {
 			}
 			writer.close();
 		}catch (IOException e){
-			showErrorDialog("An error occurred while writing the output file.\nPlease try again.");
+			showDialogWindow("An error occurred while writing the output file.\nPlease try again.", "Error", 0);
 		}
 
 	}

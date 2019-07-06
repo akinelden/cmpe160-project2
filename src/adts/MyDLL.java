@@ -31,8 +31,7 @@ public class MyDLL<T> implements DoublyLinkedListIntf<T>{
 
 	// CHANGES START BELOW THIS LINE
 	
-	// TODO: make private
-	public Node<T> last;
+	private Node<T> last;
 	private int size;
 
 	public MyDLL(){
