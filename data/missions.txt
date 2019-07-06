@@ -1,1 +1,2 @@
-Istanbul-Ankara-Diyarbakir-3-2-1,2
+Istanbul-Ankara-Erzurum-2-3-0,1
+Ankara-Denizli-Antalya-3-1-1,2,0

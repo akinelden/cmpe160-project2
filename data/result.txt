@@ -1,0 +1,42 @@
+Istanbul
+Waggon Garage:
+Locomotive Garage:
+-------------
+Ankara
+Waggon Garage:
+Locomotive Garage:
+-------------
+Bursa
+Waggon Garage:
+W7
+W6
+W3
+Locomotive Garage:
+L4
+L3
+-------------
+Antalya
+Waggon Garage:
+W13
+W10
+Locomotive Garage:
+L2
+-------------
+Denizli
+Waggon Garage:
+W2
+W4
+W1
+W12
+W11
+Locomotive Garage:
+L5
+-------------
+Erzurum
+Waggon Garage:
+W5
+W8
+W9
+Locomotive Garage:
+L1
+-------------

@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4f1193a4-4e6c-42c1-b395-2f1b0b46fc25" name="Default Changelist" comment="Main and mission classes are completed.">
+    <list default="true" id="4f1193a4-4e6c-42c1-b395-2f1b0b46fc25" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/adts/MyDLL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/adts/MyDLL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/runnable/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/runnable/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transportation/Mission.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transportation/Mission.java" afterDir="false" />
     </list>
     <list id="b5b6c059-96d7-4823-a476-b17ce59a4a66" name="Unstaged Changes" comment="">
       <change beforePath="$PROJECT_DIR$/data/dests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/dests.txt" afterDir="false" />
@@ -40,8 +37,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/runnable/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+            <state relative-caret-position="153">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
@@ -208,7 +205,7 @@
       <workItem from="1562173507787" duration="863000" />
       <workItem from="1562267481980" duration="494000" />
       <workItem from="1562350171586" duration="4291000" />
-      <workItem from="1562406452900" duration="2278000" />
+      <workItem from="1562406452900" duration="2347000" />
     </task>
     <task id="LOCAL-00001" summary="adts package is completed, required classes are added to transportation package">
       <created>1562174193340</created>
@@ -224,11 +221,18 @@
       <option name="project" value="LOCAL" />
       <updated>1562357524140</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Mission class methods are revised. Dialog window is edited.">
+      <created>1562408789773</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1562408789773</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9496000" />
+    <option name="totallyTimeSpent" value="9565000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -241,6 +245,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49756098" visible="true" weight="0.21331316" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -258,7 +263,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49924356" weight="0.3289689" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50075644" side_tool="true" weight="0.3289689" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="11" visible="true" weight="0.3289689" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.3289689" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.3289689" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -312,7 +317,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="adts package is completed, required classes are added to transportation package" />
     <MESSAGE value="Main and mission classes are completed." />
-    <option name="LAST_COMMIT_MESSAGE" value="Main and mission classes are completed." />
+    <MESSAGE value="Mission class methods are revised. Dialog window is edited." />
+    <option name="LAST_COMMIT_MESSAGE" value="Mission class methods are revised. Dialog window is edited." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -466,8 +472,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/runnable/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+        <state relative-caret-position="153">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
