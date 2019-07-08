@@ -47,16 +47,13 @@ public class Main {
 
 
 	private static void createCities(String fileName, LinkedList<City> cities){
-		BufferedReader reader = null;
-		try{
-			reader = new BufferedReader(new FileReader(fileName));
+		try(BufferedReader reader = new BufferedReader(new FileReader(fileName))){
 			String line = reader.readLine();
 			while(line!=null){
 				City c = new City(line);
 				cities.add(c);
 				line = reader.readLine();
 			}
-			reader.close();
 		}catch(FileNotFoundException e1){
 			showDialogWindow("The file: " + fileName +" could not found.\nSystem exiting.", "Error", 0);
 		}catch(IOException e2){
@@ -65,9 +62,7 @@ public class Main {
 	}
 
 	private static void createWaggons(String fileName, LinkedList<City> cities){
-		BufferedReader reader = null;
-		try{
-			reader = new BufferedReader(new FileReader(fileName));
+		try(BufferedReader reader =  new BufferedReader(new FileReader(fileName))){
 			String line = reader.readLine();
 			while(line!=null){
 				String[] splitted = line.split("\\s");
@@ -80,7 +75,6 @@ public class Main {
 				}
 				line = reader.readLine();
 			}
-			reader.close();
 		}catch(FileNotFoundException e1){
 			showDialogWindow("The file: " + fileName +" could not found.\nSystem exiting.", "Error", 0);
 		}catch(IOException e2){
@@ -91,9 +85,7 @@ public class Main {
 	}
 
 	private static void createLocomotives(String fileName, LinkedList<City> cities){
-		BufferedReader reader = null;
-		try{
-			reader = new BufferedReader(new FileReader(fileName));
+		try(BufferedReader reader = new BufferedReader(new FileReader(fileName))){
 			String line = reader.readLine();
 			while(line!=null){
 				String[] splitted = line.split("\\s");
@@ -106,7 +98,6 @@ public class Main {
 				}
 				line = reader.readLine();
 			}
-			reader.close();
 		}catch(FileNotFoundException e1){
 			showDialogWindow("The file: " + fileName +" could not found.\nSystem exiting.", "Error", 0);
 		}catch(IOException e2){
@@ -119,9 +110,7 @@ public class Main {
 	}
 
 	private static void createMissions(String fileName, LinkedList<Mission> missions, LinkedList<City> cities){
-		BufferedReader reader = null;
-		try{
-			reader = new BufferedReader(new FileReader(fileName));
+		try(BufferedReader reader =  new BufferedReader(new FileReader(fileName))){
 			String line = reader.readLine();
 			int i=1;
 			while(line!=null){
@@ -133,7 +122,6 @@ public class Main {
 				i++;
 				line = reader.readLine();
 			}
-			reader.close();
 		}catch(FileNotFoundException e1){
 			showDialogWindow("The file: " + fileName +" could not found.\nSystem exiting.", "Error", 0);
 		}catch(IOException e2){
@@ -142,9 +130,7 @@ public class Main {
 	}
 
 	private static void writeResult(String outputFileName, LinkedList<City> cities){
-		BufferedWriter writer;
-		try{
-			writer = new BufferedWriter(new FileWriter(outputFileName));
+		try(BufferedWriter writer =  new BufferedWriter(new FileWriter(outputFileName))){
 			for(City c : cities){
 				writer.write(c.getName()+"\n");
 				writer.write("Waggon Garage:\n");
@@ -161,7 +147,6 @@ public class Main {
 				}
 				writer.write("-------------\n");
 			}
-			writer.close();
 		}catch (IOException e){
 			showDialogWindow("An error occurred while writing the output file.\nPlease try again.", "Error", 0);
 		}

@@ -63,12 +63,6 @@ public class Mission {
     }
 
     public String goMidwayCity(){
-        indexes.sort(new Comparator<Integer>() {
-            @Override
-            public int compare(Integer o1, Integer o2) {
-                return -o1.compareTo(o2);
-            }
-        });
         for(int i=0; i<fromMidway; i++){
             Waggon w = midway.popWaggon();
             if(w==null){
@@ -76,16 +70,21 @@ public class Mission {
             }
             train.addWaggon(w);
         }
-        LinkedList<Waggon> removedWaggons = new LinkedList<>();
         for(Integer index : indexes){
-            Waggon w = train.removeWaggon(index);
+            Waggon w = train.getWaggon(index);
             if(w==null){
                 return "Mission "+Integer.toString(missionNo)+"- Train doesn't have any waggon at specified indexes.\nCan't continue mission.\nSystem exiting.";
             }
-            removedWaggons.add(w);
+            midway.pushWaggon(w);
         }
-        while(removedWaggons.size()>0){
-            midway.pushWaggon(removedWaggons.pollLast());
+        indexes.sort(new Comparator<Integer>() {
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                return -o1.compareTo(o2);
+            }
+        });
+        for(Integer index : indexes){
+            train.removeWaggon(index);
         }
         return null;
     }

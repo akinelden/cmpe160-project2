@@ -32,4 +32,12 @@ public class Train{
         return w;
     }
 
+    public Waggon getWaggon(int index){
+        if(index >= waggons.getSize()){
+            return null;
+        }
+        Waggon w = waggons.get(index);
+        return w;
+    }
+
 }
